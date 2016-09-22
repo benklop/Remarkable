@@ -54,7 +54,7 @@ def update_config(libdir, values = {}):
         fout.close()
         fin.close()
         os.rename(fout.name, fin.name)
-    except (OSError, IOError), e:
+    except (OSError, IOError) as e:
         print ("ERROR: Can't find %s" % filename)
         sys.exit(1)
     return oldvalues
@@ -108,7 +108,7 @@ def update_desktop_file(filename, target_pkgdata, target_scripts):
         fout.close()
         fin.close()
         os.rename(fout.name, fin.name)
-    except (OSError, IOError), e:
+    except (OSError, IOError) as e:
         print ("ERROR: Can't find %s" % filename)
         sys.exit(1)
 
